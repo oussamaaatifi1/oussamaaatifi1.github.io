@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oussama Atifi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -38,7 +38,7 @@
                 <h1 class="title">Oussama Atifi</h1>
                 <p class="domain">Full Stack Developer specialized in building exceptional digital experiences.</p>
                 <div class="actions">
-                    <a href="#" class="btn btn-primary">
+                    <a href="/assets/cv oussama.pdf" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Download CV
                     </a>
@@ -54,7 +54,7 @@
             </div>
             <div class="image-section">
                 <div class="image-wrapper">
-                    <img src="/img/1714493805701.jpeg" alt="Profile" class="profile-image">
+                    <img src="/assets/img/1714493805701.jpeg" alt="Profile" class="profile-image">
                 </div>
             </div>
         </div>
@@ -263,47 +263,47 @@
 
             <div class="skills-grid">
                 <div class="skill-card">
-                    <img src="/img/1175208.webp" alt="html5" class="skill-icon">
+                    <img src="/assets/img/1175208.webp" alt="html5" class="skill-icon">
                     <span class="skill-name">Html</span>
                     <span class="skill-percentage">92%</span>
                 </div>
                 <div class="skill-card">
-                    <img src="/img/CSS3_logo.svg.png" alt="css3" class="skill-icon">
+                    <img src="/assets/img/CSS3_logo.svg.png" alt="css3" class="skill-icon">
                     <span class="skill-name">Css</span>
                     <span class="skill-percentage">92%</span>
                 </div>
 
                 <div class="skill-card">
-                    <img src="/img/figma-1-logo-png-transparent.png" alt="Figma" class="skill-icon">
+                    <img src="/assets/img/figma-1-logo-png-transparent.png" alt="Figma" class="skill-icon">
                     <span class="skill-name">Figma</span>
                     <span class="skill-percentage">92%</span>
                 </div>
 
                 <div class="skill-card">
-                    <img src="/img/Tailwind_CSS_Logo.svg.png" alt="Tailwind" class="skill-icon">
+                    <img src="/assets/img/Tailwind_CSS_Logo.svg.png" alt="Tailwind" class="skill-icon">
                     <span class="skill-name">Tailwind</span>
                     <span class="skill-percentage">80%</span>
                 </div>
 
                 <div class="skill-card">
-                    <img src="/img/1720088.webp" alt="Java" class="skill-icon">
+                    <img src="/assets/img/1720088.webp" alt="Java" class="skill-icon">
                     <span class="skill-name">Java</span>
                     <span class="skill-percentage">75%</span>
                 </div>
 
                 <div class="skill-card">
-                    <img src="/img/Angular_full_color_logo.svg.png" alt="Angular" class="skill-icon">
+                    <img src="/assets/img/Angular_full_color_logo.svg.png" alt="Angular" class="skill-icon">
                     <span class="skill-name">Angular</span>
                     <span class="skill-percentage">85%</span>
                 </div>
 
                 <div class="skill-card">
-                    <img src="/img/Wordpress_Blue_logo.png" alt="WordPress" class="skill-icon">
+                    <img src="/assets/img/Wordpress_Blue_logo.png" alt="WordPress" class="skill-icon">
                     <span class="skill-name">WordPress</span>
                     <span class="skill-percentage">99%</span>
                 </div>
                 <div class="skill-card">
-                    <img src="/img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript"
+                    <img src="/assets/img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript"
                         class="skill-icon">
                     <span class="skill-name">JavaScript</span>
                     <span class="skill-percentage">93%</span>
@@ -311,6 +311,27 @@
             </div>
         </div>
     </section>
-</body>
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
 
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.className = savedTheme;
+            updateIcon(savedTheme === 'dark');
+        }
+
+        function updateIcon(isDark) {
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : '');
+            updateIcon(isDark);
+        });
+    </script>
+</body>
 </html>
