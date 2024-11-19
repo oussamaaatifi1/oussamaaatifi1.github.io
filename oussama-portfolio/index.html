@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oussama Atifi</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -14,6 +14,12 @@
     <div class="noise"></div>
     <header class="header">
         <nav class="nav-container">
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <!-- Navigation Links -->
             <div class="nav-links">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -22,11 +28,14 @@
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
+    
+            <!-- Theme Toggle -->
             <button class="theme-toggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
         </nav>
     </header>
+    
     <section class="hero" id="home">
         <div class="floating-shapes">
             <div class="shape shape-1"></div>
@@ -38,16 +47,16 @@
                 <h1 class="title">Oussama Atifi</h1>
                 <p class="domain">Full Stack Developer specialized in building exceptional digital experiences.</p>
                 <div class="actions">
-                    <a href="/assets/cv oussama.pdf" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Download CV
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link">
+                    <a href="https://www.linkedin.com/in/oussamaatifi/" class="social-link">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="https://github.com/oussamaaatifi1" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -63,19 +72,17 @@
         <div class="container">
             <div class="content">
                 <div class="headers">
-                    <h2>About</h2>
+                    <h2>
+                        <!-- About - SVG from SVGrepo -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                        </svg>
+                        About
+                    </h2>
                 </div>
                 <p class="description">
-                    I am a passionate Full Stack Developer specializing in creating dynamic and responsive websites and
-                    applications.
-                    I am always looking for new challenges and ways to expand my skills while contributing to meaningful
-                    projects.
+                    Développeur Full-Stack dynamique spécialisé en Java JEE et Angular, avec une expérience dans la conception et la mise en œuvre d'applications Web évolutives. Maîtrise des technologies front-end et back-end, maîtrise de l'optimisation des performances des applications et engagement à fournir des solutions conviviales. Apte à collaborer avec des équipes interfonctionnelles pour atteindre efficacement les objectifs du projet.
                 </p>
-            </div>
-            <div class="image-section">
-                <div class="image-wrapper">
-                    <img src="/api/placeholder/500/500" alt="About Me" class="profile-image">
-                </div>
             </div>
         </div>
     </section>
@@ -83,7 +90,12 @@
     <section class="timeline-section" id="resume">
         <div class="timeline-container">
             <div class="headers">
-                <h2>Parcours Professional</h2>
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    Parcours Professional
+                </h2>
             </div>
             <div class="timeline-wrapper">
                 <!-- Education Timeline -->
@@ -92,18 +104,27 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <span class="timeline-year">2020 - 2024</span>
-                                <h3 class="timeline-title">Bachelor in Computer Science</h3>
-                                <h4 class="timeline-subtitle">University of Example</h4>
+                                <span class="timeline-year">2024 - 2025</span>
+                                <h3 class="timeline-title">Certification Full-Stack Java Angular</h3>
+                                <h4 class="timeline-subtitle">École Numérique Ahmed AL HANSALI (Simplon)</h4>
                                 <p class="timeline-desc">Specialized in web development and software engineering.
                                     Graduated with honors and completed multiple practical projects.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <span class="timeline-year">2018 - 2020</span>
-                                <h3 class="timeline-title">Associate Degree in Programming</h3>
-                                <h4 class="timeline-subtitle">Technical Institute</h4>
+                                <span class="timeline-year">Sep 2019 - Aug 2021</span>
+                                <h3 class="timeline-title">Diplôme Réseaux Informatique</h3>
+                                <h4 class="timeline-subtitle">ISTA NTIC BENI MELLAL - Béni Mellal</h4>
+                                <p class="timeline-desc">Focused on fundamental programming concepts and web
+                                    technologies. Completed internship at local tech company.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <span class="timeline-year">Sep 2019</span>
+                                <h3 class="timeline-title">Bacalaureat Science Physique</h3>
+                                <h4 class="timeline-subtitle">Lycée El Zeraqtouni - Béni Mellal</h4>
                                 <p class="timeline-desc">Focused on fundamental programming concepts and web
                                     technologies. Completed internship at local tech company.</p>
                             </div>
@@ -117,18 +138,17 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <span class="timeline-year">2023 - Present</span>
-                                <h3 class="timeline-title">Senior Full Stack Developer</h3>
-                                <h4 class="timeline-subtitle">Tech Solutions Inc.</h4>
-                                <p class="timeline-desc">Lead developer for enterprise web applications. Managed team of
-                                    junior developers and implemented new technologies.</p>
+                                <span class="timeline-year">Oct 2023 - Dec 2023</span>
+                                <h3 class="timeline-title">Web Design</h3>
+                                <h4 class="timeline-subtitle">PRÉSIDENCE DE L'UNIVERSITÉ SULTAN MOULAY SLIMANE</h4>
+                                <p class="timeline-desc">Crétion Site Web Avec Wordpress De PRÉSIDENCE DE L'UNIVERSITÉ SULTAN MOULAY SLIMANE</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <span class="timeline-year">2021 - 2023</span>
-                                <h3 class="timeline-title">Frontend Developer</h3>
-                                <h4 class="timeline-subtitle">Digital Creators Co.</h4>
+                                <span class="timeline-year">Jan 2020 - Feb 2020</span>
+                                <h3 class="timeline-title">Web Design</h3>
+                                <h4 class="timeline-subtitle">PRÉSIDENCE DE L'UNIVERSITÉ SULTAN MOULAY SLIMANE</h4>
                                 <p class="timeline-desc">Developed responsive websites and implemented modern UI/UX
                                     designs. Collaborated with design team on multiple projects.</p>
                             </div>
@@ -148,23 +168,24 @@
                     </div>
                     <div class="projects-grid">
                         <div class="project-card">
-                            <img src="https://cdn1.dronahq.com/wp-content/uploads/2024/08/Dashboard-Image-Final.webp"
+                            <img src="/assets/img/Capture d’écran 2024-11-19 233005.jpg"
                                 alt="E-Commerce Platform"
                                 style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 16px;">
-                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <h3 class="project-title">Viatours : Site web d'agence de voyage</h3>
                             <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">Node.js</span>
-                                <span class="project-tag">MongoDB</span>
+                                <span class="project-tag">html</span>
+                                <span class="project-tag">Css</span>
+                                <span class="project-tag">Js</span>
                             </div>
-                            <p class="project-desc">A full-stack e-commerce platform with user authentication, product
-                                management, and payment integration.</p>
+                            <p class="project-desc">Explorez le monde avec Viatours :voyages exceptionnels,
+                                découvertes inoubliables,
+                                aventures uniques.</p>
                             <div class="project-links">
-                                <a href="#" class="project-btn btn-primary">
+                                <a href="https://github.com/oussamaaatifi1/Viatours_group" class="project-btn btn-primary">
                                     <i class="fab fa-github"></i>
                                     View Code
                                 </a>
-                                <a href="#" class="project-btn btn-outline">Live Demo</a>
+                                <a href="https://oussamaaatifi1.github.io/Viatours_group/" class="project-btn btn-outline">Live Demo</a>
                             </div>
                         </div>
 
@@ -268,70 +289,146 @@
                     <span class="skill-percentage">92%</span>
                 </div>
                 <div class="skill-card">
-                    <img src="/assets/img/CSS3_logo.svg.png" alt="css3" class="skill-icon">
+                    <img src="/img/CSS3_logo.svg.png" alt="css3" class="skill-icon">
                     <span class="skill-name">Css</span>
-                    <span class="skill-percentage">92%</span>
+                    <span class="skill-percentage">75%</span>
                 </div>
 
                 <div class="skill-card">
                     <img src="/assets/img/figma-1-logo-png-transparent.png" alt="Figma" class="skill-icon">
                     <span class="skill-name">Figma</span>
-                    <span class="skill-percentage">92%</span>
+                    <span class="skill-percentage">90%</span>
                 </div>
 
                 <div class="skill-card">
-                    <img src="/assets/img/Tailwind_CSS_Logo.svg.png" alt="Tailwind" class="skill-icon">
+                    <img src="/img/Tailwind_CSS_Logo.svg.png" alt="Tailwind" class="skill-icon">
                     <span class="skill-name">Tailwind</span>
-                    <span class="skill-percentage">80%</span>
+                    <span class="skill-percentage">70%</span>
                 </div>
 
                 <div class="skill-card">
                     <img src="/assets/img/1720088.webp" alt="Java" class="skill-icon">
                     <span class="skill-name">Java</span>
-                    <span class="skill-percentage">75%</span>
+                    <span class="skill-percentage">60%</span>
                 </div>
 
                 <div class="skill-card">
                     <img src="/assets/img/Angular_full_color_logo.svg.png" alt="Angular" class="skill-icon">
                     <span class="skill-name">Angular</span>
-                    <span class="skill-percentage">85%</span>
+                    <span class="skill-percentage">65%</span>
                 </div>
 
                 <div class="skill-card">
                     <img src="/assets/img/Wordpress_Blue_logo.png" alt="WordPress" class="skill-icon">
                     <span class="skill-name">WordPress</span>
-                    <span class="skill-percentage">99%</span>
+                    <span class="skill-percentage">90%</span>
                 </div>
                 <div class="skill-card">
                     <img src="/assets/img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript"
                         class="skill-icon">
                     <span class="skill-name">JavaScript</span>
-                    <span class="skill-percentage">93%</span>
+                    <span class="skill-percentage">60%</span>
                 </div>
             </div>
         </div>
     </section>
-    <script>
-        const themeToggle = document.querySelector('.theme-toggle');
-        const html = document.documentElement;
-        const icon = themeToggle.querySelector('i');
+    <!-- Contact Us Section -->
+    <div class="headers">
+        <h2>
+            <!-- Contact Us - SVG from SVGrepo -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>
+            Contact Us
+        </h2>
+        <p class="subtitle">We are here to assist you! Please fill out the form below to get in touch with us:</p>
+    </div>
+    <section class="contact-us">
+        <div class="container">
+            <!-- Contact Us Form -->
+            <div class="contact-form">
+                <form action="submit_contact_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
 
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            html.className = savedTheme;
-            updateIcon(savedTheme === 'dark');
-        }
-
-        function updateIcon(isDark) {
-            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = html.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : '');
-            updateIcon(isDark);
-        });
-    </script>
+            <!-- Our Contact Information Section -->
+            <div class="contact-info">
+                <img src="">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Name -->
+          <p class="footer-name">Oussama Atifi</p>
+      
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/oussamaatifi/" target="_blank" class="social-icon linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/oussamaaatifi1" target="_blank" class="social-icon github">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/atifii.oussama" target="_blank" class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://medium.com/@oussamaatifi" target="_blank" class="social-icon medium">
+              <i class="fab fa-medium-m"></i>
+            </a>
+          </div>
+      
+          <!-- Copyright -->
+          <p class="footer-copyright">&copy; 2024 YourCompany. All rights reserved.</p>
+        </div>
+      </footer>
+      
 </body>
+<script>
+    const themeToggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        html.className = savedTheme;
+        updateIcon(savedTheme === 'dark');
+    }
+
+    function updateIcon(isDark) {
+        icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : '');
+        updateIcon(isDark);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("mobile");
+            navLinks.classList.toggle("active");
+        });
+    });
+</script>
+
 </html>
