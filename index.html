@@ -73,11 +73,7 @@
             <div class="content">
                 <div class="headers">
                     <h2>
-                        <!-- About - SVG from SVGrepo -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                        </svg>
-                        About
+                        <i class="fas fa-user"></i> About
                     </h2>
                 </div>
                 <p class="description">
@@ -91,10 +87,7 @@
         <div class="timeline-container">
             <div class="headers">
                 <h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                    </svg>
-                    Parcours Professional
+                    <i class="fas fa-briefcase"></i> Parcours Professional
                 </h2>
             </div>
             <div class="timeline-wrapper">
@@ -164,7 +157,9 @@
                 <!-- Projects Section -->
                 <div class="section-block">
                     <div class="headers">
-                        <h2>Projets</h2>
+                        <h2>
+                            <i class="fas fa-folder-open"></i> Projets
+                        </h2>
                     </div>
                     <div class="projects-grid">
                         <div class="project-card">
@@ -277,9 +272,9 @@
     <section>
         <div class="containers" id="skills">
             <div class="headers">
-                <h2>My Skills</h2>
-                <p class="subtitle">We put your ideas and thus your wishes in the form of a unique web project that
-                    inspires you and your customers.</p>
+                <h2>
+                    <i class="fas fa-lightbulb"></i> My Skills
+                </h2>
             </div>
 
             <div class="skills-grid">
@@ -335,11 +330,7 @@
     <!-- Contact Us Section -->
     <div class="headers">
         <h2>
-            <!-- Contact Us - SVG from SVGrepo -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-            </svg>
-            Contact Us
+            <i class="fas fa-envelope"></i> Contact
         </h2>
         <p class="subtitle">We are here to assist you! Please fill out the form below to get in touch with us:</p>
     </div>
@@ -367,7 +358,7 @@
 
             <!-- Our Contact Information Section -->
             <div class="contact-info">
-                <img src="">
+                <img src="https://unblast.com/wp-content/uploads/2020/09/Contact-Us-Vector-Illustration-Part-02-1.jpg" alt="Contact Us Illustration" style="width: 100%; height: auto; border-radius: 10px;">
             </div>
         </div>
     </section>
@@ -397,38 +388,43 @@
         </div>
       </footer>
       
-</body>
-<script>
-    const themeToggle = document.querySelector('.theme-toggle');
-    const html = document.documentElement;
-    const icon = themeToggle.querySelector('i');
 
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        html.className = savedTheme;
-        updateIcon(savedTheme === 'dark');
-    }
-
-    function updateIcon(isDark) {
-        icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-    }
-
-    themeToggle.addEventListener('click', () => {
-        const isDark = html.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : '');
-        updateIcon(isDark);
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector(".nav-links");
-
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("mobile");
-            navLinks.classList.toggle("active");
+      <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+    
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.className = savedTheme;
+            updateIcon(savedTheme === 'dark');
+        } else {
+            // Default to light mode if no preference is saved
+            html.classList.remove('dark');
+            updateIcon(false);
+        }
+    
+        function updateIcon(isDark) {
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon(isDark);
         });
-    });
-</script>
-
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+    
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("mobile");
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+    
+</body>
 </html>
