@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oussama Atifi</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/code.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -18,7 +19,7 @@
             <button class="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
-    
+
             <!-- Navigation Links -->
             <div class="nav-links">
                 <a href="#home" class="nav-link">Home</a>
@@ -28,14 +29,9 @@
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-    
-            <!-- Theme Toggle -->
-            <button class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
         </nav>
     </header>
-    
+
     <section class="hero" id="home">
         <div class="floating-shapes">
             <div class="shape shape-1"></div>
@@ -329,42 +325,75 @@
       </footer>
       
 
-      <script>
-        const themeToggle = document.querySelector('.theme-toggle');
-        const html = document.documentElement;
-        const icon = themeToggle.querySelector('i');
-    
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            html.className = savedTheme;
-            updateIcon(savedTheme === 'dark');
-        } else {
-            // Default to light mode if no preference is saved
-            html.classList.remove('dark');
-            updateIcon(false);
-        }
-    
-        function updateIcon(isDark) {
-            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-        }
-    
-        themeToggle.addEventListener('click', () => {
-            const isDark = html.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateIcon(isDark);
-        });
-    
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuToggle = document.querySelector(".menu-toggle");
-            const navLinks = document.querySelector(".nav-links");
-    
-            menuToggle.addEventListener("click", () => {
-                navLinks.classList.toggle("mobile");
-                navLinks.classList.toggle("active");
-            });
-        });
+     <!-- New Floating Action Buttons -->
+    <div class="floating-actions">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    <script>
+    const themeToggle = document.querySelector('.theme-toggle');
+    const html = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+    html.className = savedTheme;
+    updateIcon(savedTheme === 'dark');
+    } else {
+    // Default to light mode if no preference is saved
+    html.classList.remove('dark');
+    updateIcon(false);
+    }
+
+    function updateIcon(isDark) {
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    themeToggle.addEventListener('click', () => {
+    const isDark = html.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateIcon(isDark);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("mobile");
+    navLinks.classList.toggle("active");
+    });
+    });
+
+    // Toggle dark mode
+    function toggleTheme() {
+    html.classList.toggle('dark');
+    }
+
+    // Scroll to top function
+    function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/hide back-to-top button
+    window.addEventListener('scroll', () => {
+    const backToTop = document.getElementById('backToTop');
+    if (window.scrollY > 200) {
+    backToTop.style.display = 'flex';
+    } else {
+    backToTop.style.display = 'none';
+    }
+    });
     </script>
+
+
     
 </body>
 </html>

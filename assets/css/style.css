@@ -1274,4 +1274,36 @@ h2 {
       font-size: 12px;
     }
   }
-  
+/* Floating actions for theme toggle and back-to-top buttons */
+.floating-actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-actions button {
+    background: var(--icon-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.floating-actions button:hover {
+    background: var(--icon-hover-bg);
+}
+
+.back-to-top {
+    display: none;
+}
