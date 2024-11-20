@@ -7,7 +7,7 @@
 
 :root {
     --bg-color: #ffffff;
-    --text-color: #ffffff;
+    --text-color: #0f172a;
     --nav-bg: rgba(255, 255, 255, 0.8);
     --primary-color: #7c3aed;
     --secondary-color: #000000; /* Changed to black */
@@ -1115,7 +1115,7 @@ h2 {
     font-weight: 500;
     font-size: 16px;
     background: var(--primary-color);
-    color: var(--text-color);
+    color: #ffffff;
     box-shadow: 0 0 20px var(--box-shadow);
     transition: all 0.3s ease;
     width: auto; /* Ajuste la largeur au contenu */
