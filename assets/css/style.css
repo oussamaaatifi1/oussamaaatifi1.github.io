@@ -915,6 +915,118 @@
       padding: 24px;
     }
   }
+  /* Slider Container */
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .slider-image.active {
+    opacity: 1;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .slider-controls button {
+    background: rgba(124, 58, 237, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .slider-controls button:hover {
+    background: rgba(124, 58, 237, 0.8);
+  }
+  
+  /* Gallery Popup */
+  .popup-gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+  }
+  
+  #popup-image {
+    max-width: 100%;
+    max-height: 80vh;
+    margin: 0 auto;
+  }
+  
+  .close-gallery {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .gallery-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .gallery-btn {
+    background: rgba(124, 58, 237, 0.8);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .gallery-btn:hover {
+    background: rgba(124, 58, 237, 1);
+  }
+  
+  .gallery-btn:focus {
+    outline: none;
+  }
+  
   
   .containers {
     min-height: 100vh; /* Ensures the container takes full viewport height */
@@ -1321,3 +1433,22 @@
   .back-to-top {
       display: none;
   }
+  
+  .iframe-container {
+    position: relative;
+    padding-bottom: 40.25%; /* Aspect ratio of 16:9 (for video content, for example) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
