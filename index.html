@@ -427,43 +427,54 @@
                 backToTop.style.display = 'none';
             }
         });
-        document.querySelectorAll('.slider').forEach((slider) => {
-    let currentSlide = 0;
-    const slides = slider.querySelectorAll('.slider-image, iframe');
-    const prevBtn = slider.querySelector('.prev-btn');
-    const nextBtn = slider.querySelector('.next-btn');
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slider-image");
+            const popupGallery = document.getElementById("popup-gallery");
+            const popupImage = document.getElementById("popup-image");
+            const closeGallery = document.getElementById("close-gallery");
+            const prevButton = document.getElementById("prev-image");
+            const nextButton = document.getElementById("next-image");
 
-    const updateSlide = () => {
-        slides.forEach((slide, index) => {
-            slide.classList.toggle('active', index === currentSlide);
+            let currentSlideIndex = 0;
+
+            // Function to open the popup with the clicked image
+            function openGallery(index) {
+                popupImage.src = slides[index].src;
+                currentSlideIndex = index;
+                popupGallery.style.display = "flex";
+            }
+
+            // Close the gallery popup
+            closeGallery.addEventListener("click", () => {
+                popupGallery.style.display = "none";
+            });
+
+            // Show the previous image in the gallery
+            prevButton.addEventListener("click", () => {
+                currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                popupImage.src = slides[currentSlideIndex].src;
+            });
+
+            // Show the next image in the gallery
+            nextButton.addEventListener("click", () => {
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                popupImage.src = slides[currentSlideIndex].src;
+            });
+
+            // Add click event on slider images to open gallery
+            slides.forEach((slide, index) => {
+                slide.addEventListener("click", () => {
+                    openGallery(index);
+                });
+            });
+
+            // Close the gallery if clicked outside of the popup content
+            popupGallery.addEventListener("click", (event) => {
+                if (event.target === popupGallery) {
+                    popupGallery.style.display = "none";
+                }
+            });
         });
-    };
-
-    prevBtn?.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateSlide();
-    });
-
-    nextBtn?.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlide();
-    });
-
-    updateSlide();
-});
-
-document.querySelectorAll('.open-popup').forEach((button) => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const popup = document.querySelector('#popup-gallery');
-        popup.style.display = 'flex';
-    });
-});
-
-document.querySelector('#close-gallery').addEventListener('click', () => {
-    const popup = document.querySelector('#popup-gallery');
-    popup.style.display = 'none';
-});
 
 
     </script>
